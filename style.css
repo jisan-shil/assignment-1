@@ -3,14 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+height: 98px;
+width: 1551px;
 
+}
 .navbar{
     display:flex;
     justify-content:space-between;
-    align-items: center;
+    align-items:center;
     padding:18px 80px;
     background:0D1B2A;
      border-bottom:1px solid #ececec;
+     height:56px;
+     width: 1317px;;
 }
 .logo{
     display: flex;
@@ -52,11 +58,45 @@
 
     background:#1D4ED8;
     color:white;
-
+    justify-content: center;
     padding:12px 22px;
+    width:157px;
+    height: 56px;
+    align-items: center;
 
     border-radius:8px;
 
 
 }
+ /*hero start*/
+ .hero{
+    position:relative;
+    width:100%;
+    height:100%
+ }
+ .hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+ }
 
+ .overlay{
+    position:absolute;
+    bottom:0;
+    top: 0;
+    top:0;
+    left:0;
+    width :100%;
+    height:100%;
+    z-index:1;
+
+ }
+ .hero-content{
+    position:absolute;
+    z-index:2; /*kon upadan onno upadan er upor boshbe,jar z index beshi hobe she upore boshbe*/
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#FFFFFF;
+    
+ }
