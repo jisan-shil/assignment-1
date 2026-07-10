@@ -3,38 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family:Inter,sans-serif;
+}
 header{
-height: 98px;
-width: 1551px;
+width:100%;
 
 }
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 80px;
+    width:100%;
+    padding:24px 80px;
     background:0D1B2A;
-     border-bottom:1px solid #ececec;
-     height:56px;
-     width: 1317px;;
+     border-bottom:1px solid rgba(255,255,255,.1)
 }
 .logo{
     display: flex;
 }
 .logo img{
-    height: 32px;
-    width:32;
-}
-.logo h2{
-    height: 92px;
-    width: 22px;
-
-}
-.logo span{
-    display: block;
-    height: 22px;;
-    width: 94px;
-
+    height:100%;
+    width:100%;
 }
 .nav-links{
     display:flex;
@@ -55,16 +45,14 @@ width: 1551px;
 .button{
 
     text-decoration:none;
-
+    display:inline-flex;
     background:#1D4ED8;
     color:white;
     justify-content: center;
     padding:12px 22px;
-    width:157px;
-    height: 56px;
     align-items: center;
-
     border-radius:8px;
+    cursor:pointer
 
 
 }
@@ -89,6 +77,7 @@ width: 1551px;
     width :100%;
     height:100%;
     z-index:1;
+    background:rgba(0,0,0,.55);
 
  }
  .hero-content{
@@ -98,8 +87,19 @@ width: 1551px;
     left:50%;
     transform:translate(-50%,-50%);
     color:#FFFFFF;
+    text-align: center;
     
  }
+.hero-content h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:24px;
+}
+.hero-content p{
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:40px;
+}
  /*speaker part*/
  .speakers{
     padding: 100px 0;
@@ -126,7 +126,7 @@ width: 1551px;
 
  .speaker-card{
 background: white;
-border-radius: 16 px;
+border-radius: 16px;
 overflow: hidden;
 box-shadow: 0 8px 20px rgba(0,0,0,.08);
 
@@ -136,7 +136,7 @@ box-shadow: 0 8px 20px rgba(0,0,0,.08);
 
     width:100%;
 
-    height:300px;
+    height:340px;
 
     object-fit:cover;
 
@@ -144,6 +144,9 @@ box-shadow: 0 8px 20px rgba(0,0,0,.08);
 .speaker-card:hover{
     transform: translateY(-8px);
     transition: .3s;
+}
+.speaker-card span{
+    color:#2563EB;
 }
 
 /*pricing section */
@@ -155,36 +158,82 @@ box-shadow: 0 8px 20px rgba(0,0,0,.08);
 .section-subtitle{
 
     text-align:center;
-    font: size 18px;
-    margin: bottom 60px;
+    font-size:18px;
+    margin-bottom: 60px;
 }
 .pricing-grid{
-    display: flex;
-    background:white;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px;
     border: radius 16px;
-    padding:40px 30px;
     text-align: center;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
 
 }
 .pricing-card ul{
    text-align:left ;
 margin: bottom 35px;
 
-}
 
+}
+.horizontal{
+    border:none;
+    border-top:2px dotted;
+    margin-top:16px;
+}
+.pricing-card{
+    background:#E5E7EB;
+    padding:40px 30px;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    text-align: left;
+    display:flex;
+    flex-direction:column;
+    
+}
+.pricing-card li::marker{
+    color:#2563eb;
+
+}
 .price-btn{
-    margin-top:auto;
+    margin-top:20px;
     text-decoration:none;
     display:inline-block;
-    background:#2563eb;
-
+    background:#E5E7EB;
+    border-color: #333333;
     padding:15px 35px;
-
+    border-width:2px;
     border-radius:8px;
-
+    border-style:solid;
     font-weight:600;
+}
+.black .price-btn{
+   background-color:#1D4ED8
+}
+
+.pricing-card li{
+    color:#333333;
+    margin-top:20px;
+    margin: bottom 20px;
+}
+.black{
+    transform:scale(1.05);
+    border:2px solid #2563EB;
+    background-color:#0D1B2A;
+}
+.pricing-card.black li{
+    color:#FFFFFF;
+    margin-top: 20px;
+}
+.pricing-card.black h2{
+    color:#FFFFFF;
+}
+
+.pricing-card.black h3{
+color:#60A5FA;
+}
+.pricing-card.black p{
+  color:#FFFFFF;
+  opacity:50%;
 }
 
 
@@ -193,14 +242,19 @@ margin: bottom 35px;
 .footer{
     background:#0D1B2A;
    padding:25px 0;
+   border-top:1px solid rgba(255,255,255,.15);
 }
 .footer-content{
     display: flex;
     justify-content: space-between;
+     align-items: center;
+        padding-bottom:60px;
+        padding-top 60px;
 }
 .footer-content p{
     color:#FFFFFF;
-    font-size: 16px;;
+    font-size: 16px;
+   
 }
  .footer-links{
     display: flex;
